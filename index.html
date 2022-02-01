@@ -1,952 +1,633 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" href="images/m-icon.png" />
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-			crossorigin="anonymous"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.12.0/devicon.min.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-		/>
-		<link
-			href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
-			rel="stylesheet"
-		/>
+		<title>Michael A. Farias</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/jpg" href="images/mf-black-white.png" />
+		<!-- MY STYLESHEETS -->
+		<link rel="stylesheet" href="css/stylesheet.css" />
+		<link rel="stylesheet" href="css/animations.css" />
+		<!-- FONTAWESOME STYLING -->
 		<link
 			rel="stylesheet"
 			href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
 			integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
 			crossorigin="anonymous"
 		/>
+		<!-- BOOTSTRAP STYLING-->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<!-- DEVICON STYLING -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
+		/>
+		<!-- AOS (ANIMATE ON SCROLL) -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-		<link rel="stylesheet" href="stylesheet.css" />
-		<title>Michael A. Farias</title>
+		<!-- GOOGLE FONTS -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Play&family=Bungee+Inline&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
-		<!-- Navbar -->
-		<nav
-			class="
-				navbar navbar-expand-lg
-				bg-dark
-				navbar-dark
-				text-light
-				py-1
-				fixed-top
-			"
-		>
+		<header class="fixed-top">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container d-flex justify-content-between">
+					<div>
+						<a class="navbar-brand" href="#"
+							><img src="images/mf.png" class="img-fluid" alt="" /> Michael A.
+							Farias</a
+						>
+					</div>
+					<div class="nav-icons">
+						<a target="_blank" href="https://github.com/michael-a-f"
+							><i class="fab fa-github"></i
+						></a>
+						<a
+							target="_blank"
+							href="https://www.linkedin.com/in/michael-farias/"
+							><i class="fab fa-linkedin"></i
+						></a>
+					</div>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#landing">WELCOME </a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#mission">ABOUT</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#projects">PROJECTS</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#faqs">FAQs</a>
+							</li>
+							<li class="nav-item">
+								<a
+									id="resume"
+									class="nav-link button"
+									href="/Michael_Farias_CV.pdf"
+									download
+									><i class="fas fa-download"></i> RESUM&Eacute</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<section id="landing">
 			<div class="container">
-				<button
-					class="navbar-toggler ms-auto"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navmenu"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navmenu">
-					<ul class="navbar-nav ms-auto">
-						<li class="nav-item">
-							<a href="#projects" class="nav-link lead">Projects</a>
-						</li>
-						<li class="nav-item">
-							<a href="#education" class="nav-link lead">Education</a>
-						</li>
-						<li class="nav-item">
-							<a href="#experience" class="nav-link lead">Experience</a>
-						</li>
-						<li class="nav-item">
-							<a href="#faq" class="nav-link lead">FAQ's</a>
-						</li>
-						<li class="nav-item">
-							<a href="#contact" class="nav-link lead">Contact</a>
-						</li>
-						<li class="nav-item lead">
-							<a
-								id="github-link"
-								target="_blank"
-								href="https://github.com/michael-a-f"
-								class="nav-link"
-								>My GitHub <span><i class="fas fa-external-link-alt"></i></span>
-							</a>
-						</li>
-					</ul>
+				<div class="row justify-content-between align-items-center">
+					<div class="col-md-8">
+						<h1>
+							Design and Development at the intersection of Finance and
+							Technology
+						</h1>
+						<p>
+							High quality FinTech products need high quality FinTech engineers.
+						</p>
+						<a
+							class="button"
+							data-aos="fade-right"
+							data-aos-delay="1500"
+							data-aos-anchor-placement="bottom-bottom"
+							href="#mission"
+						>
+							HOW I CAN HELP
+							<i class="fas fa-long-arrow-alt-down"></i>
+						</a>
+					</div>
+					<div
+						class="col-md-4"
+						data-aos="fade-right"
+						data-aos-delay="1500"
+						data-aos-anchor-placement="bottom-bottom"
+					>
+						<img src="images/mf-black-white.png" class="img-fluid" alt="" />
+					</div>
 				</div>
 			</div>
-		</nav>
-
-		<!-- Header -->
-		<section
-			class="
-				bg-dark
-				text-light
-				px-3
-				py-4
-				p-sm-5
-				pt-lg-5
-				text-center text-sm-start
-			"
-		>
+		</section>
+		<section id="mission">
 			<div class="container">
-				<div class="d-sm-flex align-items-center justify-content-start">
-					<img
-						class="
-							rounded-circle
-							img-thumbnail img-fluid
-							d-sm-block
-							m-sm-3
-							w-20
-						"
-						id="profile-picture"
-						src="./images/headshot.jpg"
-						alt="Michael A. Farias"
-					/>
-					<div class="pt-3 pt-sm-0">
-						<h1>Michael A. Farias</h1>
-
-						<p class="lead">
-							Business-savvy young developer looking to support and learn from
-							senior team members.
+				<div class="row info-row justify-content-between align-items-start">
+					<div class="col-md-6" data-aos="fade-down">
+						<h2>My Mission</h2>
+						<h3>
+							Deliver scalable solutions that help drive your organization
+							forward.
+						</h3>
+					</div>
+					<div class="col-md-6" data-aos="fade-up">
+						<p>I understand that my bottom line is impact.</p>
+						<p>
+							With a degree in Economics and 3 years of success on both the
+							Business and Engineering side of web apps, I bring value to all
+							stages of the process-- from strategic product direction to
+							technical implementation.
 						</p>
-						<hr />
-
-						<div
-							class="row skills-icons g-2 align-items-start align-self-start"
-						>
-							<div class="col">
-								<i class="devicon-javascript-plain colored"></i>
-							</div>
-							<div class="col">
-								<i class="devicon-react-original-wordmark colored"></i>
-							</div>
-							<div class="col">
-								<i class="devicon-nodejs-plain-wordmark colored"></i>
-							</div>
-							<div class="col">
-								<i class="devicon-python-plain-wordmark colored"></i>
-							</div>
-							<div class="col">
-								<i class="devicon-postgresql-plain-wordmark"></i>
-							</div>
-							<div class="col">
-								<i class="devicon-html5-plain-wordmark colored"></i>
-							</div>
-							<div class="col">
-								<i class="devicon-css3-plain-wordmark colored"></i>
-							</div>
-							<div class="col">
-								<i class="devicon-bootstrap-plain-wordmark colored"></i>
-							</div>
-							<div class="col">
-								<i class="devicon-git-plain-wordmark colored"></i>
-							</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="fullstack">
+			<div class="container">
+				<h1>What I have to offer...</h1>
+				<div class="row">
+					<div class="skill-card col" data-aos="zoom-out-down">
+						<div class="skill-card-header">
+							<i class="fas fa-eye"></i>
+							<h3>Front End</h3>
+						</div>
+						<div class="skill-card-content">
+							<p>
+								The usual HTML, CSS, and JavaScript. Plus hooking into Web APIs
+								and utilizing modern frameworks like React, Angular, and
+								whatever comes next.
+							</p>
+						</div>
+					</div>
+					<div class="skill-card col" data-aos="zoom-out-down">
+						<div class="skill-card-header">
+							<i class="fas fa-server"></i>
+							<h3>Back End</h3>
+						</div>
+						<div class="skill-card-content">
+							<p>
+								So far mostly Python/Flask and Node.js/Express for basic Web
+								Servers and API development. A dash of SQL querying and schema
+								design. Most importantly, a desire to keep learning more!
+							</p>
+						</div>
+					</div>
+					<div class="skill-card col" data-aos="zoom-out-down">
+						<div class="skill-card-header">
+							<i class="far fa-chart-bar"></i>
+							<h3>Data Science</h3>
+						</div>
+						<div class="skill-card-content">
+							<p>
+								Big Data is only getting bigger. With grad-level coursework in
+								Math, Stats, and Probability, I'm comfortable working hands-on
+								with Machine Learning, A/B testing, experimental design, and
+								other ad-hoc data analyses.
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-
-		<!-- Projects -->
-		<section id="projects" class="px-2 py-5 p-sm-5">
+		<section id="projects">
 			<div class="container">
-				<div
-					class="row align-items-center justify-content-between"
-					id="omnibet"
-				>
-					<div class="col-md">
-						<img
-							class="img-thumbnail project-screenshot img-fluid w-10 d-sm-block"
-							id="omnibet-screenshot"
-							src="images/omnibet.JPG"
-							alt="OmniBet Screenshot"
-						/>
+				<h1>Check out some of my work.</h1>
+				<!-- Amplify -->
+				<div class="row justify-content-between align-items-start">
+					<div class="col-md-6" data-aos="fade-right">
+						<img src="images/amplify.JPG" class="img-thumbnail" alt="" />
 					</div>
-					<div class="col-md p-5">
-						<h2>OmniBet</h2>
-						<p class="lead">Risk-Free Online Sports Gambling</p>
+					<div class="readme col-md-6" data-aos="fade-left">
+						<h2>Amplify</h2>
+						<h3>Targeted Online Surveys</h3>
 						<ul>
 							<li>
-								Constructed API to web scrape live sports betting odds using
-								Node.js, Axios, and promises.
+								<p>
+									My "Hello World!" project and introduction to all things web
+									development. Servers, clients, HTTP methods, HTML templates,
+									CSS styling... all of it.
+								</p>
+							</li>
+
+							<li>
+								<p>
+									Designed SQL schema and ORM to model Users, Surveys,
+									Questions, Responses, and Rewards.
+								</p>
 							</li>
 							<li>
-								Devised algorithm to calculate betting strategies that lead to
-								guaranteed profit, sometimes up to $500 for a single game.
+								<p>
+									Implemented user authentication and registration using
+									Flask-Login allowing for dynamic content recommendation.
+								</p>
 							</li>
 							<li>
-								Designed mobile-friendly UI to browse games, odds, and optimal
-								bets using vanilla JS, Bootstrap, and custom CSS.
+								<p>
+									Wrote SQL queries to match users with surveys targeted to
+									their unique demographic.
+								</p>
 							</li>
 						</ul>
-						<hr />
-						<div class="tech-used d-flex justify-content-start">
+						<div class="tech-icons">
+							<i class="devicon-python-plain-wordmark colored"></i>
+							<i class="devicon-postgresql-plain-wordmark colored"></i>
+							<i class="devicon-html5-plain-wordmark colored"></i>
+							<i class="devicon-css3-plain-wordmark colored"></i>
+						</div>
+						<div class="project-btns">
+							<a
+								class="button see-code"
+								href="https://github.com/michael-a-f/amplify-online-surveys"
+								target="_blank"
+							>
+								<i class="fas fa-chevron-right"></i> See Code
+							</a>
+							<a
+								class="button"
+								href="http://online-survey-platform.herokuapp.com/"
+								target="_blank"
+							>
+								<i class="fas fa-chevron-right"></i> Visit Site
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- OmniBet -->
+				<div class="row justify-content-between align-items-start">
+					<div class="col-md-6" data-aos="fade-right">
+						<img src="images/omnibet.JPG" class="img-thumbnail" alt="" />
+					</div>
+					<div class="readme col-md-6" data-aos="fade-left">
+						<h2>OmniBet</h2>
+						<h3>Risk-Free Sports Gambling</h3>
+						<ul>
+							<li>
+								<p>
+									Constructed Web API using Node.js and Express to web scrape
+									live sports betting odds.
+								</p>
+							</li>
+							<li>
+								<p>
+									Developed unique algorithm to find real-time betting
+									strategies leading to risk-free profits via arbitrage.
+								</p>
+							</li>
+							<li>
+								<p>
+									Designed mobile-friendly UI to browse games, odds, and bets.
+								</p>
+							</li>
+						</ul>
+						<div class="tech-icons">
 							<i class="devicon-nodejs-plain-wordmark colored"></i>
 							<i class="devicon-javascript-plain colored"></i>
 							<i class="devicon-html5-plain-wordmark colored"></i>
 							<i class="devicon-css3-plain-wordmark colored"></i>
 							<i class="devicon-bootstrap-plain-wordmark colored"></i>
 						</div>
-						<hr />
-						<a
-							target="_blank"
-							href="http://omnibet.herokuapp.com/"
-							class="btn btn-dark mt-3"
-						>
-							<i class="bi bi-chevron-right"></i> Live Project
-						</a>
-						<a
-							target="_blank"
-							href="https://github.com/michael-a-f/omnibet"
-							class="btn btn-dark mt-3"
-						>
-							<i class="bi bi-chevron-right"></i> Code
-						</a>
+						<div class="project-btns">
+							<a
+								class="button see-code"
+								href="https://github.com/michael-a-f/omnibet"
+								target="_blank"
+							>
+								<i class="fas fa-chevron-right"></i> See Code
+							</a>
+							<a
+								class="button"
+								href="https://omnibet.herokuapp.com/"
+								target="_blank"
+							>
+								<i class="fas fa-chevron-right"></i> Visit Site
+							</a>
+						</div>
 					</div>
 				</div>
-
-				<hr />
-
-				<div
-					class="
-						row
-						align-items-center
-						justify-content-between
-						flex-wrap-reverse
-					"
-					id="sorting-visualizer"
-				>
-					<div class="col-md p-5">
-						<h2>Algorithms with React</h2>
-						<p class="lead">
-							A UX-oriented approach to the classic sorting visualizer
-						</p>
-
+				<!-- Sorting Visualizer -->
+				<div class="row justify-content-between align-items-start">
+					<div class="col-md-6" data-aos="fade-left">
+						<img
+							src="images/search-and-sort.JPG"
+							class="img-thumbnail"
+							alt=""
+						/>
+					</div>
+					<div class="readme col-md-6" data-aos="fade-right">
+						<h2>Search N' Sort</h2>
+						<h3>A UI/UX Take on a Classic</h3>
 						<ul>
 							<li>
-								Created visualizer for Bubble Sort, Merge Sort, Insertion Sort,
-								and Quick Sort.
-							</li>
-							<li>
-								Focused on UX design principles using React's state management
-								and hooks.
+								<p>
+									Single page React app to visualize Merge Sort, Quick Sort,
+									Bubble Sort, and Insertion Sort.
+								</p>
 							</li>
 						</ul>
-						<hr />
-						<div class="tech-used d-flex justify-content-start">
+						<div class="tech-icons">
 							<i class="devicon-react-original-wordmark colored"></i>
 							<i class="devicon-javascript-plain colored"></i>
 							<i class="devicon-html5-plain-wordmark colored"></i>
 							<i class="devicon-css3-plain-wordmark colored"></i>
 							<i class="devicon-bootstrap-plain-wordmark colored"></i>
 						</div>
-						<hr />
-						<a
-							target="_blank"
-							href="http://sort-and-search.herokuapp.com/"
-							class="btn btn-dark mt-3"
-						>
-							<i class="bi bi-chevron-right"></i> Live Project
-						</a>
-						<a
-							target="_blank"
-							href="https://github.com/michael-a-f/algorithm-visualizer"
-							class="btn btn-dark mt-3"
-						>
-							<i class="bi bi-chevron-right"></i> Code
-						</a>
-					</div>
-					<div class="col-md">
-						<img
-							class="img-thumbnail project-screenshot img-fluid w-10 d-sm-block"
-							id="sorting-screenshot"
-							src="images/search-and-sort.JPG"
-							alt="Sorting Visualizer Screenshot"
-						/>
+						<div class="project-btns">
+							<a
+								class="button see-code"
+								href="https://github.com/michael-a-f/algorithm-visualizer"
+								target="_blank"
+							>
+								<i class="fas fa-chevron-right"></i> See Code
+							</a>
+							<a
+								class="button"
+								href="http://sort-and-search.herokuapp.com/"
+								target="_blank"
+							>
+								<i class="fas fa-chevron-right"></i> Visit Site
+							</a>
+						</div>
 					</div>
 				</div>
-				<hr />
-
-				<div
-					class="row align-items-center justify-content-between"
-					id="amplify"
-				>
-					<div class="col-md">
-						<img
-							class="img-thumbnail project-screenshot img-fluid w-10 d-sm-block"
-							id="amplify-screenshot"
-							src="images/amplify.JPG"
-							alt="Amplify Screenshot"
-						/>
+				<!-- OmniBet 2.0 -->
+				<div class="row justify-content-between align-items-start">
+					<div class="col-md-6" data-aos="fade-right">
+						<img src="images/omnibet2.JPG" class="img-thumbnail" alt="" />
 					</div>
-
-					<div class="col-md p-5">
-						<h2>Amplify</h2>
-						<p class="lead">Online Survey Sampling</p>
-
+					<div class="readme col-md-6" data-aos="fade-left">
+						<h2>OmniBet 2.0</h2>
+						<h3>Reimagined and Refactored</h3>
 						<ul>
 							<li>
-								Created platform for users to publish and answer
-								demographic-targeted online surveys.
+								<p>
+									Introduced Return on Investment (ROI) as user-friendly metric
+									for comparing betting options across the market.
+								</p>
 							</li>
 							<li>
-								Designed PostgreSQL schema and ORM to model Users, Surveys,
-								Questions, Answers, and Rewards.
+								<p>
+									Added Proxy IP address to web scraping HTTP requests to bypass
+									location-based content restriction.
+								</p>
 							</li>
 							<li>
-								Coded user authentication and user-personalized content using
-								Python and Jinja in a Flask environment.
+								<p>
+									Improved code modularity and maintainablity by refactoring
+									Vanilla JS to well-structured React.
+								</p>
 							</li>
 							<li>
-								Currently refactoring using Angular since it is a much more
-								appropriate framework for this project and I would like to get
-								experience with the MEAN stack.
+								<p>
+									Designed component structure for seamless integration with
+									public APIs from major sportsbooks.
+								</p>
+							</li>
+							<li>
+								<p>Improved schema of JSON API responses.</p>
+							</li>
+							<li>
+								<p>Improved exception handling to reduce breakage.</p>
+							</li>
+							<li>
+								<p>Improved Git usage.</p>
 							</li>
 						</ul>
-						<hr />
-						<div class="tech-used d-flex justify-content-start">
+						<div class="tech-icons">
+							<i class="devicon-react-original-wordmark colored"></i>
 							<i class="devicon-python-plain-wordmark colored"></i>
-							<i class="devicon-postgresql-plain-wordmark colored"></i>
 							<i class="devicon-html5-plain-wordmark colored"></i>
 							<i class="devicon-css3-plain-wordmark colored"></i>
+							<i class="devicon-bootstrap-plain-wordmark colored"></i>
 						</div>
-						<hr />
-						<a
-							target="_blank"
-							href="https://online-survey-platform.herokuapp.com/"
-							class="btn btn-dark mt-3"
-						>
-							<i class="bi bi-chevron-right"></i> Live Project
-						</a>
-						<a
-							target="_blank"
-							href="https://github.com/michael-a-f/amplify-online-surveys"
-							class="btn btn-dark mt-3"
-						>
-							<i class="bi bi-chevron-right"></i> Code
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Education -->
-		<section id="education" class="bg-dark text-light px-4 py-5 p-sm-5">
-			<div class="container my-sm-5">
-				<div class="row g-0" id="subject-card-row">
-					<div class="col" id="education-remark">
-						<div class="card">
-							<div class="card-body text-left">
-								<p class="lead">There's no problem that I can't help solve.</p>
-								<p class="mt-4">
-									I hold a Bachelor's degree in Economics from Cornell
-									University with extensive coursework in...
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col subject">
-						<div class="card" id="cs">
-							<div class="card-body text-center">
-								<i class="bi bi-diagram-3"></i>
-
-								<h3 class="card-title mb-3">Computer Science</h3>
-								<hr />
-								<p class="card-text m-1">Java OOP and Data Structures</p>
-								<p class="card-text m-1">Programming in Python</p>
-								<p class="card-text m-1">Networks and Graphs</p>
-							</div>
-						</div>
-					</div>
-					<div class="col subject">
-						<div class="card" id="stats">
-							<div class="card-body text-center">
-								<i class="bi bi-bar-chart-steps"></i>
-
-								<h3 class="card-title mb-3">Statistics</h3>
-								<hr />
-								<p class="card-text m-1">Machine Learning</p>
-								<p class="card-text m-1">Experimental Design</p>
-								<p class="card-text m-1">Probability Models</p>
-							</div>
-						</div>
-					</div>
-					<div class="col subject">
-						<div class="card box" id="math">
-							<div class="card-body text-center">
-								<i class="bi bi-calculator-fill"></i>
-
-								<h3 class="mb-3">Math</h3>
-								<hr />
-								<p class="card-text m-1">Linear Algebra</p>
-								<p class="card-text m-1">Multivariable Calculus</p>
-								<p class="card-text m-1">Econometrics</p>
-							</div>
+						<div class="project-btns">
+							<a
+								class="button see-code"
+								href="https://github.com/michael-a-f/omnibet-refactor"
+								target="_blank"
+							>
+								<i class="fas fa-chevron-right"></i> See Code
+							</a>
+							<a
+								class="button"
+								href="https://omnibet-refactor.herokuapp.com/"
+								target="_blank"
+							>
+								<i class="fas fa-chevron-right"></i> Visit Site
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-
-		<!-- Experience -->
-		<section id="experience" class="bg-light text-dark px-4 py-5 p-sm-5">
-			<div class="container my-sm-5">
-				<div
-					class="
-						d-flex
-						flex-wrap
-						justify-content-around
-						align-items-center
-						pb-3
-					"
-				>
-					<div
-						class="d-flex flex-wrap justify-content-center align-items-center"
-						id="business-card"
-					>
-						<img
-							class="ipsos-logo img-fluid"
-							id="ipsos-logo"
-							src="./images/ipsos.png"
-							alt="Ipsos Logo"
-						/>
-
-						<div id="business-card-right">
-							<p class="lead mb-4">Online Data Collection & Market Research</p>
-							<h3 class="mb-0">Michael A. Farias</h3>
-							<hr class="mt-2 mb-1" />
-							<p class="lead mb-0">Senior Financial Analyst</p>
-							<p class="mb-3">Present</p>
-
-							<p class="lead mb-0">Financial Analyst</p>
-							<p class="mb-0">June 2019 - May 2021</p>
-						</div>
-					</div>
-					<div id="experience-remark">
-						<h1 class="mb-4">Here, take my card</h1>
-						<p class="lead">
-							It might look a bit different than others. And that's a good
-							thing. I plan on using my experience to make a seamless transition
-							into a Developer role. From training to self learning to asking
-							good questions, I know the importance of being proactive and
-							adding value wherever possible.
-						</p>
-					</div>
-				</div>
-				<hr class="mb-5" />
-				<h2 class="text-center">
-					Important skills I've sharpened over my two years in Finance...
-				</h2>
-
-				<div class="row text-center g-4 pt-5" id="flip-card-row">
-					<div class="col ipsos-task-card" id="data">
-						<div class="flip-card" id="flip-card-1">
-							<div class="flip-card-inner">
-								<div class="flip-card-front">
-									<img
-										src="images/ipsos-2.jpg"
-										alt="Be Sure. Move Faster."
-										id="ipsos-slogan-2"
-										class="img-fluid ipsos-slogan"
-									/>
-
-									<div class="card ipsos-card">
-										<div class="card-body text-center p-4">
-											<i class="fas fa-chart-line"></i>
-
-											<h3 class="card-title mb-3">Data Analysis</h3>
-											<p class="card-text">
-												Cleaning, normalizing, and aggregating data with
-												advanced Excel formulas so that Senior Management can
-												make the best decisions.
-											</p>
-											<a
-												class="card-btn btn btn-primary"
-												onclick="flipCard('flip-card-1')"
-												>Quick View</a
-											>
-										</div>
-									</div>
-								</div>
-								<div class="flip-card-back">
-									<i class="h1 fas fa-chart-line"></i>
-
-									<h3 class="mb-3">Data Analysis</h3>
-
-									<ul class="text-start">
-										<li class="mb-3">
-											Assisted VP in creating a Total Cost Model comparing
-											insourced vs outsourced work. Validated and cleaned source
-											data, and translated the results into an actionable
-											insight&#8212; "Ipsos is paying $X for survey responses
-											that we can produce internally for $Y, all costs
-											considered." Results used by CFO to support increased
-											investment in our internal survey platforms.
-										</li>
-
-										<li>
-											Analyzed 900,000 rows of accounting records to determine
-											which Project Managers perform best with which clients.
-											Communicated results to Managing Director who uses them as
-											a reference for project assignments.
-										</li>
-									</ul>
-									<a
-										class="card-btn btn btn-primary"
-										onclick="flipCard('flip-card-1')"
-										>Return</a
-									>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col ipsos-task-card" id="project-management">
-						<div class="flip-card" id="flip-card-2">
-							<div class="flip-card-inner">
-								<div class="flip-card-front">
-									<img
-										src="images/ipsos-1.jpg"
-										alt="Be Sure. Move Faster."
-										id="ipsos-slogan-1"
-										class="img-fluid ipsos-slogan"
-									/>
-
-									<div class="card ipsos-card">
-										<div class="card-body text-center p-4">
-											<i class="fas fa-tasks"></i>
-
-											<h3 class="card-title mb-3">Project Management</h3>
-											<p class="card-text">
-												Improving project cost and timeline accuracy. Plus
-												monthly root cause analysis of the inevitable hiccups.
-											</p>
-											<a
-												class="card-btn btn btn-primary"
-												onclick="flipCard('flip-card-2')"
-												>Quick View</a
-											>
-										</div>
-									</div>
-								</div>
-								<div class="flip-card-back">
-									<i class="h1 fas fa-tasks"></i>
-
-									<h3 class="mb-3">Project Management</h3>
-
-									<ul class="text-start">
-										<li class="mb-3">
-											Decreased project setup time for key clients from 2 days
-											to 4 hours by seeking training on our pricing process and
-											eliminating a hand-off.
-										</li>
-										<li class="mb-3">
-											Automated monthly project review process in Excel using
-											nested formulas to flag financially problematic projects.
-											Together with the PM team, we investigate these cases and
-											recover an average of $10,000 per month by fixing data
-											entry, pricing, and billing errors. Over a 2 year period,
-											this report has shed light on outdated pricing models,
-											shady vendors, and valuable training opportunities for the
-											QA team.
-										</li>
-									</ul>
-									<a
-										class="card-btn btn btn-primary"
-										onclick="flipCard('flip-card-2')"
-										>Return</a
-									>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col ipsos-task-card" id="strategy">
-						<div class="flip-card" id="flip-card-3">
-							<div class="flip-card-inner">
-								<div class="flip-card-front">
-									<img
-										src="images/ipsos-3.jpg"
-										alt="Be Sure. Move Faster."
-										id="ipsos-slogan-3"
-										class="img-fluid ipsos-slogan"
-									/>
-
-									<div class="card ipsos-card">
-										<div class="card-body text-center p-4">
-											<i class="fas fa-hand-holding-usd"></i>
-
-											<h3 class="card-title mb-3">Strategic Thinking</h3>
-											<p class="card-text">
-												Adding value via smart bookkeeping and anticipating
-												client/management needs before they arise.
-											</p>
-											<a
-												class="card-btn btn btn-primary"
-												onclick="flipCard('flip-card-3')"
-												>Quick View</a
-											>
-										</div>
-									</div>
-								</div>
-
-								<div class="flip-card-back">
-									<i class="h1 fas fa-hand-holding-usd"></i>
-
-									<h3 class="mb-3">Strategic Thinking</h3>
-
-									<ul class="text-start">
-										<li class="mb-3">
-											Saved $250,000 in costs over 2 years via strategic
-											accounting of customer rewards balances. Receive raw
-											redemption data from offshore SQL team and keep a rolling
-											6 month average non-redemption rate which hovers around
-											35% and translates into cost savings of ~$10,000 per
-											month.
-										</li>
-										<li class="mb-3">
-											Spend downtime exploring internal datasets and legacy
-											reports to build company knowledge and identify shared
-											keys for joining datasets in new ways.
-										</li>
-										<li class="mb-3">
-											Organize ad-hoc reports by function to create an archive
-											of reusable insights and templates for my team which are
-											used to speed up and standardize analyses.
-										</li>
-									</ul>
-									<a
-										class="card-btn btn btn-primary"
-										onclick="flipCard('flip-card-3')"
-										>Return</a
-									>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- FAQ's -->
-		<section id="faq" class="bg-dark text-light px-4 py-5 p-sm-5">
-			<div class="container mt-sm-3 mb-sm-5">
-				<h2 class="text-center mb-4">Frequently Asked Questions</h2>
-				<div class="accordion accordion-flush" id="questions">
-					<div class="accordion-item" id="question-1">
-						<h2 class="accordion-header">
-							<button
-								class="accordion-button collapsed text-light bg-dark"
-								type="button"
-								data-bs-toggle="collapse"
-								data-bs-target="#question-one"
-							>
-								Why the career change?
-							</button>
-						</h2>
-						<div
-							id="question-one"
-							class="accordion-collapse collapse"
-							data-bs-parent="#questions"
-						>
-							<div class="accordion-body bg-dark">
-								<p class="mb-3">
-									I want a career that rewards technical problem solving,
-									teamwork, and continuous learning. I'm enticed by working in
-									an Agile environment where I can learn not only new languages
-									and frameworks, but new business domains and new ways of
-									thinking from talented colleagues.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="accordion-item" id="question-2">
-						<h2 class="accordion-header">
-							<button
-								class="accordion-button collapsed text-light bg-dark"
-								type="button"
-								data-bs-toggle="collapse"
-								data-bs-target="#question-two"
-							>
-								What are you looking for in your next position?
-							</button>
-						</h2>
-						<div
-							id="question-two"
-							class="accordion-collapse collapse"
-							data-bs-parent="#questions"
-						>
-							<div class="accordion-body bg-dark">
-								<p class="mb-3">
-									At a minimum, I am perfectly happy in a role where I can
-									support my team through a combination of coding,
-									documentation, debugging, and design. Bonus points if it is in
-									the Financial services, Insurance, or Market Research
-									industries. And double bonus points if the product/company has
-									a positive net impact on the world, if even just slightly.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="accordion-item" id="question-3">
-						<h2 class="accordion-header">
-							<button
-								class="accordion-button collapsed text-light bg-dark"
-								type="button"
-								data-bs-toggle="collapse"
-								data-bs-target="#question-three"
-							>
-								Where do you see yourself in 5 years?
-							</button>
-						</h2>
-						<div
-							id="question-three"
-							class="accordion-collapse collapse"
-							data-bs-parent="#questions"
-						>
-							<div class="accordion-body bg-dark">
-								<p class="mb-3">
-									Professionally, my plan is to work for 4 years, learn and
-									contribute as much as possible, and then likely complete a
-									Masters degree in Computer Science. On a more personal note, I
-									plan on staying in the tri-state area to be close to friends
-									and family, and continuing to travel and explore new hobbies
-									and interests.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="accordion-item" id="question-4">
-						<h2 class="accordion-header">
-							<button
-								class="accordion-button collapsed text-light bg-dark"
-								type="button"
-								data-bs-toggle="collapse"
-								data-bs-target="#question-four"
-							>
-								Tell me about yourself...
-							</button>
-						</h2>
-						<div
-							id="question-four"
-							class="accordion-collapse collapse"
-							data-bs-parent="#questions"
-						>
-							<div class="accordion-body bg-dark">
-								<p class="mb-3">
-									I'm a big fan of sports, cars, sneakers, video games, reading,
-									and entrepreneurship. After work you can usually find me
-									shooting hoops at a local park, playing FPS games like
-									Overwatch or Call of Duty, or hanging out with friends.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="accordion-item" id="question-5">
-						<h2 class="accordion-header">
-							<button
-								class="accordion-button collapsed text-light bg-dark"
-								type="button"
-								data-bs-toggle="collapse"
-								data-bs-target="#question-five"
-							>
-								Biggest strengths?
-							</button>
-						</h2>
-						<div
-							id="question-five"
-							class="accordion-collapse collapse"
-							data-bs-parent="#questions"
-						>
-							<div class="accordion-body bg-dark">
-								<ol>
-									<li class="mb-3">
-										<b> A passion and knack for learning </b>
-										<p class="mt-2">
-											Whether it's a new language or framework or an entirely
-											new business domain, I will never shy away from an
-											opportunity to learn.
-										</p>
-									</li>
-									<li class="mb-3">
-										<b>Trustworthiness</b>
-										<p class="mt-2">
-											If I have a question, you can trust me to ask it even if
-											it might be an obvious answer. If I make a mistake, you
-											can trust me to let my manager know ASAP so that we can
-											get ahead of it. If I don't know how to do something, you
-											can trust me to speak up immediately instead of pretending
-											to know and spinning my wheels. If my manager asks for an
-											honest opinion, you can trust me to voice mine even if it
-											means disagreeing.
-										</p>
-									</li>
-									<li class="mb-3">
-										<b>Being proactive</b>
-										<p class="mt-2">
-											I know a Senior Developer's time is much more valuable
-											than mine. That’s why I take an extremely proactive
-											approach when asking for help. I make sure to give plenty
-											of context on my issue: what specifically is tripping me
-											up, what I’ve tried already, and why that didn’t work. In
-											my current role I’ve found that by drafting a detailed
-											email with this info, 9 times out of 10 I will arrive at a
-											solution myself and won’t even need to send it.
-										</p>
-									</li>
-									<li class="mb-3">
-										<b>Attitude and leading by example</b>
-										<p class="mt-2">
-											I've found that a positive attitude and a healthy balance
-											of fun and focus are contagious in the workplace. From my
-											early career experience and my background in leadership
-											positions in competitive sports, I know that great things
-											happen when you work hard and have fun doing so.
-										</p>
-									</li>
-								</ol>
-							</div>
-						</div>
-					</div>
-
-					<div class="accordion-item" id="question-6">
-						<h2 class="accordion-header">
-							<button
-								class="accordion-button collapsed text-light bg-dark"
-								type="button"
-								data-bs-toggle="collapse"
-								data-bs-target="#question-six"
-							>
-								Biggest weaknesses?
-							</button>
-						</h2>
-						<div
-							id="question-six"
-							class="accordion-collapse collapse"
-							data-bs-parent="#questions"
-						>
-							<div class="accordion-body bg-dark">
-								<ol>
-									<li class="mb-3">
-										<b>Prone to hyperfocus and a one track mind</b>
-										<p class="mt-2">
-											My instinct when faced with a hard problem is to put my
-											headphones on, block out any distractions, and pop my head
-											back out once I’ve figured it out. While this is sometimes
-											beneficial, it is usually not the best solution in the
-											workplace. I've found that it is far better to communicate
-											hurdles and status updates so that teammates can be in
-											sync and provide help where they can.
-										</p>
-									</li>
-									<li class="mb-3">
-										<b
-											>Overly energized by impact and drained by administrative
-											work</b
-										>
-										<p class="mt-2">
-											I find great satisfaction in seeing my team/company
-											benefit from my effort. Conversely, in my current role I
-											sometimes catch myself feeling drained and discouraged
-											when filing receipts or collecting payments from vendors.
-											I think this is mostly a role-specific thing, but I can
-											definitely find a better balance in how I derive job
-											satisfaction going forward.
-										</p>
-									</li>
-									<li class="mb-3">
-										<b>Imposter syndrome</b>
-										<p class="mt-2">
-											This has already gotten much better as I keep building a
-											strong skill set. But when confronted with a new
-											technology, at times I still find myself thinking “This is
-											it… This is the thing I’ll never be able to learn.”
-											Sometimes this can be a good motivator but the downside is
-											that it can cause me to not share a certain idea or not
-											embark on a certain project because I think it is above my
-											skill level. Fortunately I’ve proved myself wrong every
-											single time, but hey, we’re all human :)
-										</p>
-									</li>
-								</ol>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Contact -->
-		<section id="contact" class="bg-light text-dark px-4 py-5 p-sm-5">
+		<section id="faqs">
 			<div class="container">
-				<div
-					class="d-flex flex-wrap align-items-center justify-content-around"
-					id="contact-card"
-				>
-					<div id="contact-me">
-						<h1 class="mb-4">Let's get in touch</h1>
-						<p class="lead">
-							I'd love to chat if you see a potential fit for me at your
-							company. I'm available Monday - Friday 9am to 6pm EST via phone or
-							email.
-						</p>
-						<p class="lead">Many thanks for your time and review!</p>
+				<div class="row info-row">
+					<div class="col-md-4" data-aos="fade-down">
+						<h2>FAQ's</h2>
+						<h3>
+							I am an open book. Culture fit is just as important for me as it
+							is for you.
+						</h3>
 					</div>
-					<div id="contact-info">
-						<ul class="list-group list-group-flush p-0 lead">
-							<li class="list-group-item">
-								<span class="fw-bold"><i class="bi bi-geo-alt-fill"></i></span>
-								Fairfield County, CT
-							</li>
-							<li class="list-group-item">
-								<span class="fw-bold"
-									><i class="bi bi-telephone-fill"></i
-								></span>
-								(203) 826-4096
-							</li>
-							<li class="list-group-item">
-								<span class="fw-bold"><i class="bi bi-envelope-fill"></i></span>
-								mfarias496@gmail.com
-							</li>
-							<li class="list-group-item">
-								<span class="fw-bold"><i class="bi bi-calendar-week"></i></span>
-								Available to start August 1st
-							</li>
-						</ul>
+					<div class="col-md-8" data-aos="fade-up">
+						<div class="accordion accordion-flush" id="accordionExample">
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="headingOne">
+									<button
+										class="accordion-button"
+										type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#collapseOne"
+										aria-expanded="true"
+										aria-controls="collapseOne"
+									>
+										What are you looking for in your next position?
+									</button>
+								</h2>
+								<div
+									id="collapseOne"
+									class="accordion-collapse collapse show"
+									aria-labelledby="headingOne"
+									data-bs-parent="#accordionExample"
+								>
+									<div class="accordion-body">
+										<p>
+											I am looking for a Full Stack role on a team using modern
+											technologies in the FinTech space! As for specifics, my
+											only preference is for a larger company with more
+											resources dedicated to onboarding/training/developing
+											junior employees. If this sounds like your team, I'd love
+											to hear about it!
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="headingTwo">
+									<button
+										class="accordion-button collapsed"
+										type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#collapseTwo"
+										aria-expanded="false"
+										aria-controls="collapseTwo"
+									>
+										Where do you see yourself in 5 years?
+									</button>
+								</h2>
+								<div
+									id="collapseTwo"
+									class="accordion-collapse collapse"
+									aria-labelledby="headingTwo"
+									data-bs-parent="#accordionExample"
+								>
+									<div class="accordion-body">
+										<p>
+											Professionally, my plan is to work for 4 years, learn and
+											contribute as much as possible, and then likely complete a
+											Masters degree in Computer Science. On a more personal
+											note, I plan on staying in the tri-state area to be close
+											to friends and family, and continuing to travel and
+											explore new hobbies and interests.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="accordion-item">
+								<h2 class="accordion-header" id="headingThree">
+									<button
+										class="accordion-button collapsed"
+										type="button"
+										data-bs-toggle="collapse"
+										data-bs-target="#collapseThree"
+										aria-expanded="false"
+										aria-controls="collapseThree"
+									>
+										Greatest strengths?
+									</button>
+								</h2>
+								<div
+									id="collapseThree"
+									class="accordion-collapse collapse"
+									aria-labelledby="headingThree"
+									data-bs-parent="#accordionExample"
+								>
+									<div class="accordion-body">
+										<ul>
+											<li>
+												<strong>A passion and knack for learning</strong>
+												<p>
+													Whether it's a new language or framework or an
+													entirely new business domain, I will never shy away
+													from an opportunity to learn.
+												</p>
+											</li>
+											<li>
+												<strong>Being proactive</strong>
+												<p>
+													I try my best to stay one step ahead of any setbacks
+													and to make asking for help as painless as possible. I
+													make sure to give plenty of context on my issue: what
+													specifically is tripping me up, what I've tried
+													already, and why that didn't work.
+												</p>
+											</li>
+											<li>
+												<strong>Attitude and leading by example</strong>
+												<p>
+													I've found that a positive attitude and a healthy
+													balance of fun and focus are contagious in the
+													workplace. Great things happen when you work hard and
+													have fun doing so.
+												</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-
-		<!-- Footer -->
-		<footer class="p-4 bg-dark text-light">
-			<div class="container my-3">
-				<img
-					id="footer-logo"
-					class="img-fluid"
-					src="images/m-icon.png"
-					alt="M Logo"
-				/>
+		<section id="call-to-action">
+			<div class="container">
+				<div class="row info-row align-items-center">
+					<div
+						class="col-md-6"
+						data-aos="zoom-in-up"
+						data-aos-anchor-placement="bottom-bottom"
+					>
+						<h1>Want to learn more?</h1>
+						<p>
+							I'd love to connect if you see a good fit in your organization.
+						</p>
+						<button class="button">
+							Let's Go <i class="fas fa-long-arrow-alt-right"></i>
+						</button>
+					</div>
+					<div
+						class="col-md-6"
+						data-aos="zoom-in-down"
+						data-aos-anchor-placement="bottom-bottom"
+					>
+						<fieldset>
+							<legend>Let's get in touch!</legend>
+							<p><i class="fas fa-phone"></i> (203) 826-4096</p>
+							<p><i class="far fa-envelope"></i> mfarias496@gmail.com</p>
+							<p><i class="fas fa-map-marker-alt"></i> Queens, NY</p>
+							<p><i class="far fa-calendar-alt"></i> Available March 1st</p>
+						</fieldset>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<a href="#landing">WELCOME</a>
+					<a href="#mission">ABOUT</a>
+					<div>
+						<a target="_blank" href="https://github.com/michael-a-f"
+							><i class="fab fa-github"></i
+						></a>
+						<a
+							target="_blank"
+							href="https://www.linkedin.com/in/michael-farias/"
+							><i class="fab fa-linkedin"></i
+						></a>
+					</div>
+					<a href="#projects">PROJECTS</a>
+					<a href="#faqs">FAQs</a>
+				</div>
 			</div>
 		</footer>
-
-		<!-- Scripts -->
+		<!-- AOS SCRIPTS -->
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+		<!-- BOOTSTRAP SCRIPT -->
 		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 			crossorigin="anonymous"
 		></script>
-		<script type="text/javascript" src="index.js"></script>
 	</body>
 </html>
